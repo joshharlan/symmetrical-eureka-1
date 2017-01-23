@@ -1,11 +1,14 @@
 /**
  * Created by 226784 on 1/10/2017.
  * Ammar Sheikh
- */
+ Testing Code
+ 
+ *
+//Running Tests on this code to implement
+
 
 //JDK in program file>Java>java 1.8;
-// FIND SOURCE FILE AND MOVE PNG things TO IT
-// DOWNLOAD AN API??
+
 
 import java.awt.Color;
 import java.awt.Dimension;
