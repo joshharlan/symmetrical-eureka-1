@@ -64,6 +64,7 @@ public class Main extends JPanel implements ActionListener {
     private Image apple;
     private Image head;
 
+    
     public Main() {
     	try {
 		new audioInputStream();

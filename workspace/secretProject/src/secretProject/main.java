@@ -10,16 +10,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Scanner;
 
-/**
- * Created by Taylor Hudson on 1/5/2017.
- */
 class graphics implements Runnable, KeyListener, WindowListener, MouseListener {
-    public final String TITLE = "Banana Quest Two: The Pointless Sequel!";
+    public final String TITLE = "Keep the Balloon Up!";
     public final Dimension SIZE = new Dimension(1920, 1040);
     public JFrame frame;
     private boolean isRunning, isDone;
     private Image imgBuffer;
-    private BufferedImage banana;
     private boolean change;
     @SuppressWarnings("unused")
     private Color BROWN;
@@ -29,9 +25,7 @@ class graphics implements Runnable, KeyListener, WindowListener, MouseListener {
 	private BufferedImage banana2;
 	private BufferedImage worldMap;
 	private BufferedImage kkonA;
-	private BufferedImage House;
-	private BufferedImage Planato;
-	private 	boolean titleScreen, levelOne, WorldMap, Home, BCity, K226, Dialogue1;
+	private 	boolean titleScreen, levelOne, WorldMap, Home, BCity, Dialogue1;
 	int wmx = 0;
 	int wmy = 0;
 	int hx = 800;
@@ -46,12 +40,8 @@ class graphics implements Runnable, KeyListener, WindowListener, MouseListener {
     private void loadImages() {
 
     	try{
-    		banana1 = ImageIO.read(this.getClass().getResource("Banana1.png"));	
-    		banana2 = ImageIO.read(this.getClass().getResource("Banana2.png"));
-    		worldMap = ImageIO.read(this.getClass().getResource("charcoal.png"));
+    		worldMap = ImageIO.read(this.getClass().getResource("wallpaper.fw.png"));
     		kkonA = ImageIO.read(this.getClass().getResource("kkonA.png"));
-    		House = ImageIO.read(this.getClass().getResource("House.png"));
-    		Planato = ImageIO.read(this.getClass().getResource("Planato.png"));
     	}catch(Exception e){
     		
     	}
@@ -64,7 +54,6 @@ class graphics implements Runnable, KeyListener, WindowListener, MouseListener {
        WorldMap = false;
        Home = false;
        BCity = false;
-       K226 = false;
        Dialogue1 = false;
         loadImages();
         frame = new JFrame();
@@ -413,13 +402,11 @@ class graphics implements Runnable, KeyListener, WindowListener, MouseListener {
     private void title(Graphics2D g2d){
     	g2d.setColor(Color.BLACK);
     	g2d.fillRect(0, 0, SIZE.width, SIZE.height);
-    	g2d.setColor(Color.YELLOW);
+    	g2d.setColor(Color.BLUE);
     	g2d.setFont(g2d.getFont().deriveFont(g2d.getFont().getSize() * 10F));
-    	g2d.drawString("Banana Quest Two", 450, 400);
+    	g2d.drawString("Keep the Balloon Up!", 450, 400);
     	g2d.setFont(g2d.getFont().deriveFont(g2d.getFont().getSize() * .5F));
-    	g2d.drawString("The Pointless Sequel!", 650, 500);
-    	g2d.drawImage(banana1, 1400, 250, null);
-    	g2d.drawImage(banana2, 250, 250, null);
+    	//g2d.drawString("(Literally Brett's Game)", 650, 500);
     	g2d.setFont(g2d.getFont().deriveFont(g2d.getFont().getSize() * 2F));
     	g2d.setFont(g2d.getFont().deriveFont(g2d.getFont().getSize() * .1F));
     	g2d.drawString("Press Space to begin.", 850, 800);

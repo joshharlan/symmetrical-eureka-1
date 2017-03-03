@@ -15,7 +15,7 @@ public class audioInputStream {
 
     public audioInputStream() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         // TODO Auto-generated method stub
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("miimusic.wav").getAbsoluteFile());
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("Bag-Raiders-Shooting-Stars.wav").getAbsoluteFile());
         System.out.println("AUDIO");
         Clip clip = AudioSystem.getClip();
         clip.open(audioInputStream);
